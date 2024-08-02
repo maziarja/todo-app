@@ -10,6 +10,12 @@ class TodoView {
   _modeToggle = document.querySelector(".mode-toggle");
 
   _renderData(data) {
+    console.log(data);
+    if (data.length === 0) {
+      document.querySelector(".actions").classList.add("hidden");
+    } else {
+      document.querySelector(".actions").classList.remove("hidden");
+    }
     document.querySelector(".todo-type").value = "";
     this._parentEl.innerHTML = "";
     //prettier-ignore

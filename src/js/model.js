@@ -44,13 +44,18 @@ export const activeTodo = function () {
 };
 export const completedTodo = function () {
   const data = state.data.filter((d) => d.completed === true);
+  console.log(data);
   return data;
 };
 
 export const clearCompleted = function () {
-  state.data.forEach((d) => {
-    d.completed = false;
-    d.active = true;
+  const data = state.data.filter((d) => d.completed === true);
+  data.forEach((d) => {
+    let index = state.data.indexOf(d);
+    while (index !== -1) {
+      state.data.splice(index, 1);
+      index = state.data.indexOf(d);
+    }
   });
   // local storage
   persistData();
