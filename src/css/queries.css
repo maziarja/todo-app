@@ -1,0 +1,107 @@
+/*********************************
+******* width below 1288px *******
+*********************************/
+@media (max-width: 80.5em) {
+  .centered {
+    width: 45rem;
+  }
+  .action {
+    margin-left: 0;
+  }
+}
+
+/*********************************
+******* width below 1024px *******
+*********************************/
+@media (max-width: 64em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+/*********************************
+******* width below 904px *******
+*********************************/
+@media (max-width: 56.5em) {
+  .centered {
+    width: 45rem;
+  }
+  .type-container {
+    grid-template-columns: 1.3fr 10fr;
+  }
+}
+/*********************************
+******* width below 640px *******
+*********************************/
+@media (max-width: 40em) {
+  .main.dark {
+    background-size: 100rem 30rem;
+  }
+  .main.light {
+    background-size: 100rem 30rem;
+  }
+}
+
+/*********************************
+******* width below 552px *******
+*********************************/
+@media (max-width: 34.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  .actions {
+    font-size: 1.5rem;
+    position: relative;
+  }
+  .action {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 100%;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: hsl(235, 24%, 19%);
+  }
+  .form.dark .action {
+    background-color: hsl(235, 24%, 19%);
+  }
+  .form.light .action {
+    background-color: hsl(0, 0%, 98%);
+  }
+  .form.light .lists,
+  .form.light .actions {
+    box-shadow: -1px 10px 20px 0px hsl(236, 9%, 85%);
+  }
+
+  .drag-drop {
+    margin-top: 12rem;
+  }
+}
+/*********************************
+******* width below 424px *******
+*********************************/
+@media (max-width: 26.5em) {
+  .centered {
+    width: 35rem;
+  }
+  .type-container {
+    grid-template-columns: 1.7fr 10fr;
+  }
+  input::placeholder {
+    font-size: 1.6rem;
+  }
+  .check-box {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/*********************************
+******* width below 328px *******
+*********************************/
+@media (max-width: 20.5em) {
+  .centered {
+    width: 32rem;
+  }
+}

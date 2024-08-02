@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  max-width: 144rem;
+  text-align: center;
+}
+
+.main__dark {
+  background: url(/images/bg-desktop-dark.jpg) top no-repeat,
+    hsl(235, 21%, 11%) bottom;
+}
+.main__light {
+  background: url(/images/bg-desktop-light.jpg) top no-repeat,
+    hsl(236, 33%, 92%) bottom;
+}
+.main {
+  height: 100vh;
+  /* padding-bottom: 3rem; */
+  position: relative;
+  overflow: auto;
+}
+.centered {
+  display: inline-block;
+  width: 37.5%;
+  margin-top: 7.7rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.4rem;
+}
+.heading {
+  font-size: 3.7rem;
+  color: hsl(0, 0%, 98%);
+  text-transform: uppercase;
+  letter-spacing: 1.7rem;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  padding: 2rem;
+}
+
+.type-container {
+  margin-bottom: 2.5rem;
+
+  display: grid;
+  grid-template-columns: 1.2fr 10fr;
+  justify-items: center;
+  align-items: center;
+}
+
+li .todo-type {
+  width: 100%;
+  font-family: inherit;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 1.75rem;
+}
+.todo-type {
+  font-size: 1.8rem;
+}
+
+.type-container:first-child {
+  border-radius: 5px;
+}
+li:nth-child(1) {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.todo-list {
+  width: 100%;
+  font-family: inherit;
+  font-size: 2rem;
+  background-color: inherit;
+  outline: none;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  margin-bottom: 0;
+}
+
+.todo-list:hover .icon-cross {
+  opacity: 100;
+  cursor: pointer;
+}
+
+.check-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  justify-self: start;
+}
+
+.check-box:active {
+  background: linear-gradient(0.4turn, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.icon-check {
+  opacity: 0;
+}
+
+.todo-text {
+  font-size: 1.8rem;
+  justify-self: start;
+  margin-left: 1.5rem;
+}
+.line {
+  position: relative;
+  color: inherit;
+}
+
+.todo-text:hover {
+  cursor: pointer;
+}
+.icon-cross {
+  display: inline-block;
+  opacity: 0;
+  margin-left: 2rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.4rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.action {
+  margin-left: 2rem;
+  font-weight: 700;
+}
+.action a {
+  margin-left: 1.5rem;
+}
+.drag-drop {
+  margin-top: 5.3rem;
+  margin-bottom: 5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+a:active {
+  color: hsl(220, 98%, 61%);
+}
+
+/* needs JS */
+.todo-list.cross .line::after {
+  content: "";
+  width: 100%;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.cross.todo-list .icon-check {
+  opacity: 1;
+}
+.cross.todo-list .check-box {
+  background: linear-gradient(0.4turn, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.all.blue {
+  color: hsl(220, 98%, 61%);
+}
+.active.blue {
+  color: hsl(220, 98%, 61%);
+}
+.completed.blue {
+  color: hsl(220, 98%, 61%);
+}
+.hidden {
+  display: none;
+}
+
+/*** dark and light mode ***/
+
+.form.dark .type-container {
+  background-color: hsl(235, 24%, 19%);
+}
+
+.form.light .type-container {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.form.dark .todo-type {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+}
+
+.form.light .todo-type {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 19%, 35%);
+}
+.form.dark input::placeholder {
+  color: hsl(234, 11%, 52%);
+}
+.form.light input::placeholder {
+  color: hsl(236, 9%, 61%);
+}
+.form.dark .todo-list {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+}
+.form.light .todo-list {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 19%, 35%);
+  border-bottom: 1px solid hsl(236, 33%, 92%);
+}
+.form.dark .check-box {
+  border: 1.5px solid hsl(237, 14%, 26%);
+}
+.form.light .check-box {
+  border: 1.5px solid hsl(236, 33%, 92%);
+}
+.form.dark .check-box:hover {
+  border-color: hsl(233, 14%, 35%);
+}
+.form.light .check-box:hover {
+  border-color: hsl(233, 11%, 84%);
+}
+.form.dark .todo-list.cross .line {
+  color: hsl(235, 19%, 35%);
+}
+.form.light .todo-list.cross .line {
+  color: hsl(233, 11%, 84%);
+}
+.form.light .todo-list.cross .line::after {
+  border-top: 2px solid hsl(233, 11%, 84%);
+}
+.form.dark .todo-list.cross .line::after {
+  border-top: 2px solid hsl(233, 14%, 35%);
+}
+.form.dark .icon-cross svg path {
+  fill: #494c6b;
+}
+.form.light .icon-cross svg path {
+  fill: hsl(236, 9%, 55%);
+}
+.form.dark .actions {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(233, 14%, 35%);
+}
+.form.light .actions {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(236, 9%, 61%);
+}
+.form.dark a:hover {
+  color: hsl(236, 33%, 92%);
+}
+.form.light a:hover {
+  color: hsl(235, 19%, 35%);
+}
+
+.form.light .lists,
+.form.light .actions {
+  box-shadow: -1px 10px 20px 0px hsl(236, 9%, 68%);
+}
+.form.dark .lists,
+.form.dark .actions {
+  box-shadow: -1px 10px 20px 0px hsl(236, 9%, 7%);
+}
+.drag-drop.dark {
+  color: hsl(233, 14%, 35%);
+}
+.drag-drop.light {
+  color: hsl(236, 9%, 61%);
+}
+
+/* ----  drag and drop ---- */
+.dragging {
+  opacity: 0.5;
+}
