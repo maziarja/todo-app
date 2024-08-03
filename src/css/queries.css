@@ -17,6 +17,9 @@
   html {
     font-size: 56.25%;
   }
+  .drag-drop {
+    margin-top: 15rem;
+  }
 }
 /*********************************
 ******* width below 904px *******
@@ -75,7 +78,7 @@
   }
 
   .drag-drop {
-    margin-top: 12rem;
+    margin-top: 18rem;
   }
 }
 /*********************************

@@ -33,6 +33,8 @@ const contolActiveTodo = function () {
   todoView._renderItemNumbers(data);
   /// drag and drop functionality
   todoView._dragAndDrop();
+  /// show actions even if there is no data
+  todoView._showAction();
 };
 
 const controlAlltodo = function () {
@@ -56,6 +58,8 @@ const controlCompleteTodo = function () {
   todoView._renderItemNumbers(data);
   /// drag and drop functionality
   todoView._dragAndDrop();
+  /// show actions even if there is no data
+  todoView._showAction();
 };
 
 const controlClearCompleted = function () {

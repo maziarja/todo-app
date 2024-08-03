@@ -44,7 +44,6 @@ export const activeTodo = function () {
 };
 export const completedTodo = function () {
   const data = state.data.filter((d) => d.completed === true);
-  console.log(data);
   return data;
 };
 
